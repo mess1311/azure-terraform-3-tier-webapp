@@ -1,8 +1,5 @@
 # 3-Tier Azure Web App — Terraform 
 
----
-
-
 ## Install Terraform and sign in to Azure
 
 1. **Install the Azure CLI** (if you don't have it) — Terraform uses your
@@ -93,7 +90,7 @@ project, and again any time you change provider versions. Think of it
 like `npm install` for a Node project — it's fetching the tooling your
 code depends on, not touching Azure at all yet.
 
-### 2. `terraform fmt` (optional but good habit)
+### 2. `terraform fmt` 
 ```bash
 terraform fmt
 ```
@@ -143,7 +140,7 @@ az webapp deploy --resource-group rg-3tier-webapp-tf \
 
 ---
 
-## Making changes (this is where Terraform shines)
+## Making changes 
 
 Say you want to change the autoscale minimum from 2 to 3 instances. You'd
 edit the `minimum = "2"` line in `autoscale.tf` to `"3"`, then run:
@@ -188,19 +185,13 @@ further for your resume.
 
 ---
 
-## Part 9: Tear down
+## Destroy
 
 When you're done experimenting:
 
 ```bash
 terraform destroy
 ```
-
-This shows you a plan of everything that will be **deleted** (the mirror
-image of `apply`), asks for `yes` to confirm, then removes every resource
-Terraform created — stopping all billing for this project. This only
-works cleanly if Terraform created everything (i.e. you didn't manually
-add or delete things in the Azure Portal in the meantime).
 
 ---
 
