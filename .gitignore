@@ -1,0 +1,24 @@
+# Local .terraform directory (downloaded provider plugins - large, regenerable)
+.terraform/
+# NOTE: .terraform.lock.hcl is deliberately NOT ignored - best practice is
+# to commit this file so everyone on a team installs the exact same
+# provider version.
+
+# State files - contain sensitive data (like your SQL password) in plain text.
+# In a real team project these live in a remote backend (Azure Storage), not
+# on disk at all - see the README.
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Your real variable values - never commit real secrets
+terraform.tfvars
+*.auto.tfvars
+
+# Crash logs
+crash.log
+crash.*.log
+
+# CLI config that might contain credentials
+.terraformrc
+terraform.rc

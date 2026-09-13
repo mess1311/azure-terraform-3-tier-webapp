@@ -1,0 +1,23 @@
+# terraform.tfvars.example
+#
+# WHAT THIS FILE DOES:
+# terraform.tfvars is where you put actual values for the variables
+# declared in variables.tf, so you don't have to type them on the command
+# line every time. Terraform automatically loads a file named exactly
+# "terraform.tfvars" (or any file ending in .auto.tfvars) with no extra
+# flags needed.
+#
+# HOW TO USE THIS FILE:
+# 1. Copy it:  cp terraform.tfvars.example terraform.tfvars
+# 2. Edit the copy with your real values.
+# 3. Never commit the real terraform.tfvars to git (see .gitignore in this
+#    project - it already excludes it). This example file, with fake
+#    values, is safe to commit; your real one is not.
+
+unique_suffix   = "jd0903"
+sql_admin_login = "sqladmin"
+
+# Don't put your real password here even in your own copy if this repo is
+# ever going to be pushed to GitHub - see the README for the recommended
+# approach (passing it via an environment variable instead).
+# sql_admin_password = "DO-NOT-COMMIT-THIS"
